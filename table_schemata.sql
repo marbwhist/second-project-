@@ -1,14 +1,12 @@
 CREATE TABLE happiness (
-  id SERIAL PRIMARY KEY,
-  overall_rank INT NOT NULL,
-  country VARCHAR(300) NOT NULL,  
+  country VARCHAR(300) NOT NULL PRIMARY KEY, 
+  overall_rank INT NOT NULL,   
   score INT NOT NULL,
   GDP_per_capita DOUBLE PRECISION NOT NULL 	
 );
 
 CREATE TABLE environment (
-  id SERIAL PRIMARY KEY,
-  country VARCHAR(300) NOT NULL,
+  country VARCHAR(300) NOT NULL PRIMARY KEY,
   city_accessibility DOUBLE PRECISION NOT NULL,
   cropland_cover DOUBLE PRECISION NOT NULL,
   tree_canopy_cover DOUBLE PRECISION NOT NULL,
@@ -25,4 +23,3 @@ CREATE USER mary WITH PASSWORD 'dog';
 CREATE USER molly WITH PASSWORD 'cat';
 
 
-SELECT h. 
